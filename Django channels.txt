@@ -1,0 +1,4 @@
+1- install Django channels 
+2- update to 'asgi' application
+3- websockets
+4- htmx websockets
