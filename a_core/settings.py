@@ -91,6 +91,14 @@ TEMPLATES = [
 ASGI_APPLICATION = 'a_core.asgi.application'
 
 
+# In-memory Channels Layer for developement / for production we use RedisChannelLayer
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+
+
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 

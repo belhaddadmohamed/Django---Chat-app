@@ -2,3 +2,6 @@
 2- update to 'asgi' application
 3- websockets
 4- htmx websockets
+5- Channel layer 
+	development : InMemoryChannelLayer
+	production : RedisChannelLayer

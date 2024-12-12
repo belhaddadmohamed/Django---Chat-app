@@ -1,9 +1,9 @@
 
 
-{% if user == msg.author %}
+{% if user == message.author %}
     <li class="flex justify-end mb-4">
         <div class="bg-green-200 rounded-l-lg rounded-tr-lg p-4 max-w-[75%]">
-            <span>{{msg.body}}</span>
+            <span>{{message.body}}</span>
         </div>
         <div class="flex items-end">
             <svg height="13" width="8" >
@@ -15,8 +15,8 @@
     <li>
         <div class="flex justify-start">
             <div class="flex items-end mr-2" >
-                <a href="{% url 'profile' msg.author.username %}">
-                    <img class="w-8 h-8 rounded-full object-cover" src="{{msg.author.profile.image.url}}">
+                <a href="{% url 'profile' message.author.username %}">
+                    <img class="w-8 h-8 rounded-full object-cover" src="{{message.author.profile.image.url}}">
                 </a>
             </div>
             <div class="flex items-end" >
@@ -25,12 +25,12 @@
                 </svg>
             </div>
             <div class="bg-white p-4 max-w-[75%] rounded-r-lg rounded-tl-lg">
-                <span>{{msg.body}}</span>
+                <span>{{message.body}}</span>
             </div>  
         </div>
         <div class="text-sm font-light py-1 ml-10">
-            <span class="text-white">{{msg.author.profile.displayname}}</span> 
-            <span class="text-gray-400">@{{msg.author.username}}</span>
+            <span class="text-white">{{message.author.profile.displayname}}</span> 
+            <span class="text-gray-400">@{{message.author.username}}</span>
         </div>
     </li>
 {% endif %}
